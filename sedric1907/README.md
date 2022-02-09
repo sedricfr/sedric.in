@@ -1,3 +1,0 @@
-# Sedric
-
-Portfolio
