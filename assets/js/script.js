@@ -12,19 +12,48 @@ function sendMail(params) {
   $YOUR_TEMPLATE_ID = "template_z6fz8sp";
   $YOUR_USER_ID = "user_F8henL4pU9rHXeoRUShwD";
 
-  emailjs
-    .send($YOUR_SERVICE_ID, $YOUR_TEMPLATE_ID, tempParams)
+  const n = document.getElementById("fromname").value;
+  const e = document.getElementById("fromemail").value;
+  const s = document.getElementById("msubject").value;
+  const m = document.getElementById("message").value;
+  if (n == "" || e == "" || s == "" || m == "") {
+    validateForm();
+  } else {
+    emailjs
+      .send($YOUR_SERVICE_ID, $YOUR_TEMPLATE_ID, tempParams)
 
-    .then(
-      function (response) {
-        console.log("SUCCESS!", response.status, response.text);
-        fc();
-      },
-      function (error) {
-        console.log("FAILED...", error);
-        fe();
-      }
-    );
+      .then(
+        function (response) {
+          console.log("SUCCESS!", response.status, response.text);
+          fc();
+        },
+        function (error) {
+          console.log("FAILED...", error);
+          fe();
+        }
+      );
+  }
+}
+
+function validateForm() {
+  const n = document.getElementById("fromname").value;
+  const e = document.getElementById("fromemail").value;
+  const s = document.getElementById("msubject").value;
+  const m = document.getElementById("message").value;
+
+  if (n == "" && e == "" && s == "" && m == "") {
+    alert("Enter all Details !!");
+  } else {
+    if (n == "") {
+      alert("Message must be filled out");
+    } else if (e == "") {
+      alert("Email must be filled out");
+    } else if (s == "") {
+      alert("Subject must be filled out");
+    } else if (m == "") {
+      alert("Message must be filled out");
+    }
+  }
 }
 
 function fc() {
