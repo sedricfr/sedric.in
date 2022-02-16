@@ -18,7 +18,8 @@ function sendMail(params) {
   const m = document.getElementById("message").value;
   if (n == "" || e == "" || s == "" || m == "") {
     validateForm();
-  } else {
+  } 
+  else {
     emailjs
       .send($YOUR_SERVICE_ID, $YOUR_TEMPLATE_ID, tempParams)
 
