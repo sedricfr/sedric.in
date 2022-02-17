@@ -8,9 +8,9 @@ function sendMail(params) {
     message: document.getElementById("message").value,
   };
 
-  $YOUR_SERVICE_ID = "service_kow7j4i";
-  $YOUR_TEMPLATE_ID = "template_z6fz8sp";
-  $YOUR_USER_ID = "user_F8henL4pU9rHXeoRUShwD";
+  $YOUR_SERVICE_ID = "service_ryr4qiv";
+  $YOUR_TEMPLATE_ID = "template_z8338pr";
+  $YOUR_USER_ID = "user_aGmuL0slyXUEYVXmuKhvp";
 
   const n = document.getElementById("fromname").value;
   const e = document.getElementById("fromemail").value;
